@@ -1,37 +1,37 @@
-Order Tracking System (Java OOP Project)
-Overview
-This project is an Order Tracking System developed using Object-Oriented Programming (OOP) principles in Java. It simulates how customers place orders and track their status in real time.
+📦 Order Tracking System (Java OOP Project)
+📌 Overview
 
-Features
-Customer creation
+This project is an Order Tracking System developed using Object-Oriented Programming (OOP) principles in Java.
+It simulates how customers place orders and track their status in real time.
 
-Order placement
+🚀 Features
 
-Online orders & Store pickup orders
+👤 Customer creation
+📦 Order placement
+🌐 Online orders & 🏬 Store pickup orders
+📍 Order tracking system
+🔄 Status updates (Processing → Shipped → Delivered)
+⚠️ Input validation and error handling
 
-Order tracking system
+🧠 OOP Concepts Used
+🔒 Encapsulation
 
-Status updates (Processing → Shipped → Delivered)
-
-Input validation and error handling
-
-OOP Concepts Used
-Encapsulation
 Private attributes in classes
-
 Access via constructors and getters
 
-Inheritance
+🧬 Inheritance
+
 OnlineOrder and StoreOrder inherit from Order
 
-Polymorphism
+🔄 Polymorphism
+
 Method overriding (displayOrderDetails())
 
-Abstraction
+🎭 Abstraction
+
 Order is an abstract class
 
-Project Structure
-text
+🏗️ Project Structure
 OrderTrackingSystem/
 │
 ├── src/
@@ -44,27 +44,20 @@ OrderTrackingSystem/
 │
 ├── README.md
 └── .gitignore
-How to Run
-Prerequisites
-Java JDK 8 or above
+⚙️ How to Run
+✅ Prerequisites
 
+Java JDK 8 or above
 VS Code / IntelliJ / Eclipse
 
-Steps
+▶️ Steps
 Open the project folder
-
 Open terminal inside the folder
-
 Compile:
-
-text
 javac src/*.java
 Run:
-
-text
 java -cp src MainApp
-Sample Output
-text
+🧪 Sample Output
 Online Order ID: 101
 Customer: Harrick
 Address: Chennai
@@ -76,48 +69,49 @@ Customer: Alex
 Pickup Location: Coimbatore
 Status: Ready for Pickup
 ---------------------------
-Class Description
-Customer
+🧩 Class Description
+
+👤 Customer
 Stores customer details (ID, Name)
 
-Order (Abstract Class)
+📦 Order (Abstract Class)
 Base class containing common attributes (orderId, customer, status)
 
-OnlineOrder
+🌐 OnlineOrder
 Handles delivery-based orders
 
-StoreOrder
+🏬 StoreOrder
 Handles store pickup orders
 
-OrderTracker
+📍 OrderTracker
 Manages and displays all orders
 
-MainApp
+🚀 MainApp
 Main class to run the application
 
-Error Handling
-Prevents null or empty values
+⚠️ Error Handling
 
+Prevents null or empty values
 Throws IllegalArgumentException for invalid inputs
 
-Future Enhancements
-Add order cancellation
+🌟 Future Enhancements
 
-Add delivery date tracking
+💬 Add order cancellation
+📅 Add delivery date tracking
+📲 Notification system
+🔍 Search orders by ID
+🌐 Database integration (MySQL / MongoDB)
 
-Notification system
+🤝 Contribution
 
-Search orders by ID
+Feel free to fork this repository and improve the project 🚀
 
-Database integration (MySQL / MongoDB)
+📜 License
 
-Contribution
-Feel free to fork this repository and improve the project.
+This project is open-source and free to use
 
-License
-This project is open-source and free to use.
+👨‍💻 Author
 
-Author
 Harrick Christo J.P
 B.Tech Artificial Intelligence & Data Science (SJCE)
-312324243074
+Register No: 312324243074 🚀
