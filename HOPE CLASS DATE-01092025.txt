@@ -1,0 +1,625 @@
+									HOPE CLASS DATE-01/09/2025
+										(USING JAVA)
+
+
+PROBLEM 1 : SUM OF ALL ELEMENTS IN A ARRAY USING JAVA
+
+Input:  arr = [1, 2, 3, 4]
+Output: arr = 10											HOME WORK:
+													1)Time & space learning. 
+													2)Convert notes to cpp.					
+EXPLAINATION:														
+1+2+3+4=10
+
+CODING:
+import java.util.Scanner;
+
+
+public class Sub {
+    public static void main(String[] args) {
+        // Print a simple message
+        Scanner sc=new Scanner(System.in);
+        System.out.println("The the size of array");
+        int n=sc.nextInt();
+        int [] arr= new int[n];
+        for(int i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        int sum=0;
+        for(int i=0;i<n;i++)
+            sum+=arr[i];
+        System.out.println(sum);
+        
+    }
+}
+
+
+PROBLEM 2: REPLACE EACH ELEMNET IN ARRAY WITH SUM OF ALL OTHER ELEMENTS EXCEPT ITSELF
+
+Input:  arr = [1, 2, 3, 4]
+Output: arr = [9, 8, 7, 6]
+Explanation:
+For index 0 → 2+3+4 = 9  
+For index 1 → 1+3+4 = 8  
+For index 2 → 1+2+4 = 7  
+For index 3 → 1+2+3 = 6
+
+so we will find the sum of them and replace them by subtracting the remaining 
+
+CODING:(BEST APPROACH)
+
+import java.util.Scanner;
+public class Sub {
+    public static void main(String[] args) {
+        // Print a simple message
+        Scanner sc=new Scanner(System.in);
+        System.out.println("The the size of array");
+        int n=sc.nextInt();
+        int [] arr= new int[n];
+        for(int i=0;i<n;i++)
+            arr[i]=sc.nextInt();
+        int sum=0;
+        for(int i=0;i<n;i++)
+            sum+=arr[i];
+        for(int i=0;i<n;i++)
+            arr[i]=sum-arr[i];
+        for(int i=0;i<n;i++)
+            System.out.print(arr[i]+" ");
+    }
+}
+
+
+
+PROBLEM 3: REPLACE EVERY ELEMENT WITH SUM OF ALL ITS RIGHT SIDE ELEMENTS IN AN ARRAY 
+
+INPUT:{12,10,5,20,15}
+OUTPUT:{50,40,35,15,0}
+
+CODING:
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Take array size from user
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+        int sum = 0;
+
+        // Input array elements
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            sum += arr[i];  // Add each element to sum
+        }
+	
+	for (int i = 0; i < n; i++) {
+	    arr[i]=sum-arr[i];
+	    sum=arr[i]
+        }
+
+        // Print the modified array
+        
+        for (int i = 0; i < n; i++) {
+            System.out.println(arr[i] + " ");
+        }
+
+        sc.close();
+               
+    }
+}
+
+
+PROBLEM 4: REPLACE EVERY ELEMENT WITH SUM OF ALL ITS LEFT SIDE ELEMENTS IN AN ARRAY 
+
+INPUT:
+5
+{50,10,5,20,15}
+
+OUTPUT:
+{0,50,60,65,85}
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Take array size from user
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+        int sum = 0;
+
+        // Input array elements
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            sum += arr[i];  // Add each element to sum
+        }
+	
+	for (int i = n-1; i >= 0; i--) {
+	    arr[i]=sum-arr[i];
+	    sum=arr[i]
+        }
+
+        // Print the modified array
+        
+        for (int i = 0; i < n; i++) {
+            System.out.println(arr[i] + " ");
+        }
+
+        sc.close();
+               
+    }
+}
+
+
+PROBLEM 5: ARRAY REVERSE 
+
+INPUT :
+{10,20,30,40,50}
+
+OUTPUT:
+{50,40,30,20,10}
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Take array size from user
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+        
+
+        // Input array elements
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            
+        }
+	int front , rear,temp;
+	for(front=0,rear=n-1;front<rear ; front++ , rear--){
+		temp=arr[front];
+		arr[front]=arr[rear];
+		arr[rear]=temp;
+	}
+	// Print the modified array
+        
+        for (int i = 0; i < n; i++) {
+            System.out.println(arr[i] + " ");
+        }
+
+        sc.close();
+               
+    }
+}
+
+
+PROBLEM 6 : CHECK WHEATHER TE GIVEN ARRAY IS PALINDROME OR NOT
+
+INPUT:                          
+{1,2,3,2,1}
+
+OUTPUT:
+YES
+
+INPUT:
+{9,8,3,2,1}
+
+OUTPUT:
+NO
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Take array size from user
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+        
+
+        // Input array elements
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            
+        }
+	int front , rear,temp;
+	for(front=0,rear=n-1;front<rear ; front++ , rear--){
+		
+		if(arr[front]!=arr[rear]){
+			System.out.println("NO");
+			break;
+		}			
+	}
+	if(front>=rear){
+			System.out.println("YES");
+		}
+
+	sc.close();
+               
+    }
+}
+
+
+PROBLEM 7 (COMPULSORY TCS) : ARRAY ROTATION (CLOCKWISE)
+
+INPUT:
+
+5
+10 20 30 40 50
+1  (NO OF ROTATIONS)
+
+
+OUTPUT:
+
+50 10 20 30 40
+
+
+go with reverse approach 
+
+safe=arr[4]
+arr[4]=arr[3]   arr[i+1]=arr[i]
+arr[3]=arr[2]
+arr[2]=arr[1]
+arr[1]=arr[0]
+arr[0]=safe
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Take array size from user
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+        
+
+        // Input array elements
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            
+        }
+	int safe,itr;
+	
+	safe=arr[n-1];
+	for(int i=n-2;i>=0;i--)
+		arr[i+1]=arr[i];
+	arr[0]=safe;
+	
+
+	// Print the modified array
+        
+        for (int i = 0; i < n; i++) {
+            System.out.println(arr[i] + " ");
+        }
+
+        sc.close();
+               
+    }
+}
+
+
+HW :PROBLEM 8 (COMPULSORY TCS) : ARRAY ROTATION (ANTI-CLOCKWISE)
+
+
+
+
+
+
+							 			HOPE CLASS DATE-02/09/2025
+
+
+
+TYPE 1:SEGRGREGATIONS : 0'S & 1'S SEGGREGATION
+ 
+ip:arr[]: 0 0 1 1 0 1 0 1 1 0 1
+op;arr[]: 0 0 0 0 0 1 1 1 1 1 1
+
+STEPS:
+1. FIND THE TOTAL SIZE & THE NO OF 0 COUNT & 1's COUNT BY TRAVERSING. 
+2.SO BASED ON THE COUNT FILL THE 1st FEW ELEMENTS WITH 0's & THEN WITH 1.
+
+OR BY USING TWO POINTERS APPROACH (OR) TWO FRIENDS ALBORITHM
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Take array size from user
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+        
+
+        // Input array elements
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            
+        }
+	int f,r;
+	for (f=0,r=n-1;f<r;f++,r--) {
+	    while(arr[f]==0){
+		f++;
+		}
+	    while(arr[r]==1){
+		r--;
+		}
+	    if(f<r){
+		int t=arr[f];
+		arr[f]=arr[r];
+		arr[r]=t;
+		}	
+		
+        }
+
+        // Print the modified array
+        
+        for (int i = 0; i < n; i++) {
+            System.out.println(arr[i] + " ");
+        }
+
+        sc.close();
+               
+    }
+}
+
+
+TYPE 2 : MOVE ZERO'S TO END
+
+
+INPUT :
+12 34 0 45 0 0 10 15 0 0 23
+
+OUTPUT:
+12 34 45 10 15 23 0 0 0 0 0
+
+LOGIC :
+Here the  front & the rear pointer are starting from the 0th index and they are incremented if the arr[rear]==0 then it will swap its value with the non zero arr[front].
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Take array size from user
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+        
+
+        // Input array elements
+        
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            
+        }
+	int f,r;
+	for (f=0,r=0;f<n;f++) {
+
+	    if(arr[f]!=0){
+		int t=arr[f];
+		arr[f]=arr[r];
+		arr[r]=t;
+		r++;
+		}	
+		
+        }
+
+        // Print the modified array
+        
+        for (int i = 0; i < n; i++) {
+            System.out.println(arr[i] + " ");
+        }
+
+        sc.close();
+               
+    }
+}
+
+IF NEEDED TO MOVE 0'S TO 1ST THEN START THE POINTERS FROM THE LAST INDEX.
+
+
+
+TYPE 3: EVEN ODD SEGREGATION (HW):
+
+INPUT:
+12 24 35 67 40 22 13 25 26
+
+OUTPUT:
+12 24 40 22 26 35 67 13 25
+
+
+
+DIGIT MANUPILATION or (NUMBER CRUNCHING) (IMPT ROUND 1 TOPIC IN PRODUCT BASED COMPANY);
+
+
+There are 4 main topic here in number crunching 
+
+1.Construction *,+
+  a)Right append
+  b)Left append
+ 
+2.Extraction /,-
+  a)Right extraction 
+  b)Left extraction
+
+
+1.Construction
+  a)Right append
+                   
+
+	i/p: 3  5  6  4  8
+		
+	o/p: 3  35  356  3564  35648
+
+
+	LOGIC: result=result*10+previous
+
+
+
+
+CODING:
+
+int res=0;
+while(True){
+	int d=sc.nextInt();
+	while(d<0){
+		break;
+		res=res*10+d;
+		}
+}
+
+
+ b)Left append
+
+	i/p: 3  5  6  4  8
+	
+	o/p: 3  53  653  4653  84653
+	 
+	LOGIC: result=digit*previous+result and pv*=10
+
+CODING:
+
+int result=0,pv=1;
+while(True){
+	int d=sc.nextInt();
+	while(d<0)
+		break;
+		
+	result=digit*previous+result;
+	pv*=10;
+		
+}
+
+
+
+
+2.Extraction /,-
+  a)Right extraction 
+
+	(Number/the req place value)%10 =  the process of find the particular value from the given number 
+
+	(5784/1)%10=4
+	(5784/10)%10=8
+	(5784/100)%10=7
+	(5784/1000)%10=5
+
+   b) left extraction 
+	
+
+
+							HOPE CLASS (03/09/25)
+
+
+PROBLEMS:
+
+1) SUM OF DIGITS:
+
+i/p:73594
+o/p:28
+
+CODING:
+
+int sum,dig;
+while(num!=0){
+	dig=num%10;
+	sum+=dig;
+	num/=10;
+}
+
+
+2) REVERSE A DIGIT:(USING RIGHT EXTRACTION & CONSTRUCTION)
+
+i/p:73594
+o/p:49537
+
+CODING:
+
+int res=0,dig=0;
+while(num!=0){
+	dig=num%10;
+	res=res*10+dig;
+	num/=10;
+}
+
+here the value of num would be modified so use pv method so that num wont be modified 
+
+int res=0,dig=0;
+while(num!=0){
+	dig=num%10;
+	res=res*10+dig;
+	num/=10;
+}
+
+
+3) CHECK WHETHER THE GIVEN IS PALINDROME OR NOT
+
+int res=0,dig=0;
+while(num!=0){
+	dig=num%10;
+	res=res*10+dig;
+	num/=10;
+}
+
+
+if(num==res)
+	s.o.p("Palindrome");
+else
+	s.o.p("Not palindrome");  
+
+
+
+7) EVEN ODD SEGREGATION
+
+i/p: 5291478
+o/p: 2485917
+
+CODING:
+
+#include <stdio.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+
+    int even = 0, odd = 0;
+    int even_place = 1, odd_place = 1;
+    int temp = num;
+
+    // Process each digit
+    while (temp > 0) {
+        int d = temp % 10; // Get last digit
+
+        if (d % 2 == 0) {
+            even = even + d * even_place;  // Place even digits in correct order
+            even_place *= 10;
+        } else {
+            odd = odd + d * odd_place;     // Place odd digits in correct order
+            odd_place *= 10;
+        }
+        temp /= 10;
+    }
+
+    // Combine even digits first, then odd digits
+    int result = even * odd_place + odd;
+    printf("%d\n", result);
+
+    return 0;
+}
+
+NOTES : https://drive.google.com/drive/folders/1zbUnH-cfq4POm8wo_vLUFMEWnHxJlviu

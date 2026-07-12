@@ -1,0 +1,16 @@
+						Java Class - HOPE (16/03/2026)
+
+Java - It is a high level , object oriented programming language 
+
+Key Features of Java:
+platform independent - irrespective of OS
+it runs on every OS
+robust - error handling
+secure - used by banks 
+
+Java Eco System:
+JDK ,JRE , JVM
+JDK(JAVA DEVLOPER KIT)=JRE + Compilers + tools
+JRE(Java Runtime Environment) = JVM + Lib
+JVM(Java Virtual Machine) = run engine of Java
+

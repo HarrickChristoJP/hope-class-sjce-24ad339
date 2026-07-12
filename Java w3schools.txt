@@ -1,0 +1,44 @@
+1) Constants (final keyword)
+When you do not want a variable's value to change, use the final keyword.
+
+A variable declared with final becomes a constant, which means unchangeable and read-only:
+
+ExampleGet your own Java Server
+final int myNum = 15;
+myNum = 20;  // Error: cannot assign a value to final variable 'myNum'
+
+When to Use final?
+You should declare variables as final when their values should never change. For example, the number of minutes in an hour, or your birth year:
+
+Example
+final int MINUTES_PER_HOUR = 60;
+final int BIRTHYEAR = 1980;
+
+
+
+Primitive Data Types
+A primitive data type specifies the type of a variable and the kind of values it can hold.
+
+There are eight primitive data types in Java:
+
+Data Type	Description
+byte	Stores whole numbers from -128 to 127
+short	Stores whole numbers from -32,768 to 32,767
+int	Stores whole numbers from -2,147,483,648 to 2,147,483,647
+long	Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+float	Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
+double	Stores fractional numbers. Sufficient for storing 15 to 16 decimal digits
+boolean	Stores true or false values
+char	Stores a single character/letter or ASCII values
+
+
+
+
+
+Java Type Casting
+Type casting means converting one data type into another. For example, turning an int into a double.
+
+In Java, there are two main types of casting:
+
+Widening Casting (automatic) - converting a smaller type to a larger type size
+byte -> short -> char -> int -> long -> float -> double
